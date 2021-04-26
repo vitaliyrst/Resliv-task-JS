@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+    <style type="text/css">
+        .red {color: red;}
+    </style>
+</head>
+<body>
+<input type="text" name="name" id="name_input" value="BaseValue">
+<script>
+    const input = document.querySelector('#name_input');
+
+    input.addEventListener('input', () =>{
+        (input.value === 'BaseValue') ?
+            input.classList.remove('red') :
+            input.classList.add('red');
+    });
+</script>
+</body>
+</html>

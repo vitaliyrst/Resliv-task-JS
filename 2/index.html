@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <form id="form_filter">
+        <h4>Sizes:</h4>
+        <input type="radio" name="size" id="sizeS" value="S">
+        <label for="sizeS">S</label>
+        <input type="radio" name="size" id="sizeM" value="M">
+        <label for="sizeM">M</label>
+        <input type="radio" name="size" id="sizeL" value="L">
+        <label for="sizeL">L</label>
+
+        <h4>Colors:</h4>
+        <input type="checkbox" name="color" id="color1" value="1">
+        <label for="color1">1</label>
+        <input type="checkbox" name="color" id="color2" value="2">
+        <label for="color2">2</label>
+        <input type="checkbox" name="color" id="color3" value="3">
+        <label for="color3">3</label>
+        <input type="checkbox" name="color" id="color4" value="4">
+        <label for="color4">4</label>
+        <input type="checkbox" name="color" id="color5" value="5">
+        <label for="color5">5</label>
+
+        <h4>Manufacturers:</h4>
+        <select name="manufacturer" multiple size="4">
+            <option value="aaa">aaa</option>
+            <option value="b&c">b&c</option>
+            <option value="ddd">ddd</option>
+            <option value="eee">eee</option>
+        </select>
+
+        <h4>Sale:</h4>
+        <input type="checkbox" name="sale" id="sale" value="1">
+        <label for="sale"></label>
+    </form>
+</div>
+
+<script src="filter.js"></script>
+</body>
+</html>
