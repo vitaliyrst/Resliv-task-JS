@@ -1,0 +1,41 @@
+.main_employees_container{
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.employees_list_container{
+    width: 340px;
+}
+
+.employees_list{
+    list-style: none;
+}
+
+
+.employees_button_add {
+    font: inherit;
+    width: 200px;
+    height: 30px;
+
+    margin-left: 140px;
+    margin-top: 20px;
+
+    border: 2px solid #000000;
+    border-radius: 15px;
+
+    color: black;
+    outline: none;
+    cursor: pointer;
+}
+
+.employees_button_add:hover{
+    background: #000000;
+    color: white;
+}
+
+.employees_button_add:focus{
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}

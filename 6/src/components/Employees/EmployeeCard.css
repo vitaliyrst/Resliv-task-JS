@@ -1,0 +1,39 @@
+.employee_card {
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px gray solid;
+    position: relative;
+}
+
+.employee_card_remove {
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+}
+
+.employee_card_remove:hover {
+    opacity: 1;
+}
+
+.employee_card_remove:before,
+.employee_card_remove:after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 4px;
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+.employee_card_remove:before {
+    transform: rotate(45deg);
+}
+
+.employee_card_remove:after {
+    transform: rotate(-45deg);
+}
