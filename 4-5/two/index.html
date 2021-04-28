@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receiver Page</title>
+</head>
+<body>
+<h1>Receiver Page</h1>
+<p id="messageContainer">No Message</p>
+</body>
+<script src="Receiver.js"></script>
+<script>
+    new Receiver('http://domain.one', document.querySelector('#messageContainer'));
+</script>
+</html>

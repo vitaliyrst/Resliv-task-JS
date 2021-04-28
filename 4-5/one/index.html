@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller Page</title>
+</head>
+<body>
+<h1>Controller Page</h1>
+<div>
+    <label for="setKey">Set Key</label><input id="setKey" type="text">
+    <label for="setValue">Set Value</label><input id="setValue" type="text">
+    <button id="setItem" type="button">Set Item</button>
+</div>
+<div>
+    <label for="getKey">Get Key</label><input id="getKey" type="text">
+    <button id="getItem" type="button">Get Item</button>
+</div>
+<div>
+    <label for="removeKey">Remove Key</label><input id="removeKey" type="text">
+    <button id="removeItem" type="button">Remove Item</button>
+</div>
+
+<div>
+    <iframe id="two" src="http://domain.two" width="600" height="400"></iframe>
+</div>
+
+
+</body>
+<script src="Controller.js"></script>
+<script>
+    let controller = new Controller(document.querySelector('#two'), 'http://domain.two');
+    let buttons = document.getElementsByTagName('button');
+
+    for (const button of buttons) {
+        button.addEventListener('click', eo => {
+            const target = eo.target;
+
+            switch (target.id) {
+                case 'setItem' :
+                    let setKey = document.querySelector('#setKey').value;
+                    let setValue = document.querySelector('#setValue').value;
+                    controller[target.id](setKey, setValue);
+                    break;
+                case 'getItem' :
+                    let getKey = document.querySelector('#getKey').value;
+                    controller[target.id](getKey);
+                    break;
+                case 'removeItem' :
+                    let removeKey = document.querySelector('#removeKey').value;
+                    controller[target.id](removeKey);
+                    break;
+                default:
+                    return null;
+            }
+        });
+    }
+</script>
+</html>
